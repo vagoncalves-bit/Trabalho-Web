@@ -1,0 +1,69 @@
+@font-face {
+    font-family: "Genshin";
+    src: url("zh-cn.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.loginlabel
+{
+    font-family: "Genshin";
+    color: #1c4c96;
+    font-size: 20px;
+    text-shadow: #1c4c96 0px 0px 2px;
+    text-align: center;
+    display: block; width: 100%;
+}
+
+.inputbox
+{
+    font-family: "Genshin";
+    border-radius: 15px;
+    height: 30px;
+    margin-bottom: 10px;
+    box-shadow: #E8ECEF 0px 0px 5px;
+    display: block; width: 100%;
+    border: #E8ECEF solid 2px;
+}
+
+.loginbox
+{
+    font-family: "Genshin";
+    background: #A9B4C2;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    box-shadow: #E1E2E6 0px 0px 10px;
+    margin: auto;
+    border: solid 2px #E1E2E6;
+}
+
+.button
+{
+    font-family: "Genshin";
+    background: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    box-shadow: black 0px 0px 5px;
+    color: #1c4c96;
+    border: solid 2px #E8ECEF;
+    align: center;
+    display: block; width: 100%;
+    margin-top: 10px;
+}
+
+h2
+{
+    font-family: "Genshin";
+    color: #E1E2E6;
+    text-shadow: black 0px 0px 5px;
+    text-align: center;
+}
+
+body
+{
+    background-image: url("Sea\ of\ flowers.jpg");
+    background-position: 100% 20%;
+}
