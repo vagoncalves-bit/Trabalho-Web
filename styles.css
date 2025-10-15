@@ -8,11 +8,12 @@
 .loginlabel
 {
     font-family: "Genshin";
-    color: #1c4c96;
+    /*color: #1c4c96;*/
+    color: black;
     font-size: 20px;
-    text-shadow: #1c4c96 0px 0px 2px;
     text-align: center;
     display: block; width: 100%;
+    margin-bottom: 10px;
 }
 
 .inputbox
@@ -24,19 +25,21 @@
     box-shadow: #E8ECEF 0px 0px 5px;
     display: block; width: 100%;
     border: #E8ECEF solid 2px;
+    margin-bottom: 50px;
+    font-size: 20px;
 }
 
 .loginbox
 {
     font-family: "Genshin";
-    background: #A9B4C2;
+    background: rgba(169, 180, 194, 0.8);
     border-radius: 10px;
-    width: 200px;
-    height: auto;
+    width: 350px;
+    height: 500px;
     padding: 20px;
     box-shadow: #E1E2E6 0px 0px 10px;
-    margin: auto;
-    border: solid 2px #E1E2E6;
+    margin-left: 100px;
+    border: solid 1px #E1E2E6;
 }
 
 .button
@@ -45,7 +48,7 @@
     background: white;
     border-radius: 10px;
     width: 100px;
-    height: 30px;
+    height: 40px;
     box-shadow: black 0px 0px 5px;
     color: #1c4c96;
     border: solid 2px #E8ECEF;
@@ -57,13 +60,14 @@
 h2
 {
     font-family: "Genshin";
-    color: #E1E2E6;
-    text-shadow: black 0px 0px 5px;
+    color: #FCEA9D;
+    text-shadow: #FCEA9D 0px 0px 5px;
     text-align: center;
+    font-size: 50px;    
 }
 
 body
 {
-    background-image: url("Sea\ of\ flowers.jpg");
+    background-image: url("Sea of flowers.jpg");
     background-position: 100% 20%;
 }
