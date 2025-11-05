@@ -1,0 +1,170 @@
+@font-face{
+    font-family: 'Genshin';
+    src:url('Genshin\ Impact\ DRIP\ FONT.ttf') format('truetype');
+}
+
+.fundo{
+    background-image: url("../Imagens/genshin.png");
+    background-repeat:round;
+    background-attachment: fixed;
+}
+
+.mainDiv{
+    border: 2px solid black;
+    border-radius: 5px;
+    
+    margin: auto;
+    padding: 10px;
+
+    height: 650px;
+    width: 70%;
+
+    background-color: aliceblue;
+}
+.productDiv{
+
+    border-bottom: 2px dashed black;
+
+    height: 100px;
+    padding: 5px;
+}
+.top{
+    border-bottom: 2px dashed black;
+}
+.remover{
+    background-color: red;
+    
+    border-radius: 1px;
+
+    color: #FCEA9D;
+    margin-left: 450px;
+}
+.imgCarrinho{
+    height: 90px;
+    width:  90px;
+}
+.preçoCarrinho{
+    padding-left: 100px;
+}
+.qtdCarrinho{
+    padding-left: 150px;
+}
+.qtdInput{
+    width: 30px;
+}
+
+
+th{
+    padding-left: 10px;
+    padding-right: 100px;
+}
+a{
+    color:white;
+}
+button:focus{
+    color: yellow;
+}
+
+/*********************/
+/*  FOOTER           */
+/*********************/
+footer{
+    padding: 10px;
+    padding-left: 40px;
+    margin-top: 10px;
+
+    background-color: whitesmoke;
+    height: 10%;
+}
+
+.ValorFooter{
+    padding-left: 10px;
+}
+.QtdFooter{
+    padding-left: 35px;
+}
+.buttonFooter{
+    padding-left: 395px;
+}
+.confirmar{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #92DE7E;
+    margin-top: 0px;
+    width: 150px;
+}
+
+
+
+/********************/
+/*  BARRA PRINCIPAL */
+/********************/
+.div_topo{
+    background-color: #1C4C96;
+    height: 100px;
+}
+
+.div_adicional{
+    background-color: #1C4C96;
+    height: 40px;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #1C4C96;
+  }
+
+form {
+    border: 3px solid white;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Para centralizar o conteúdo interno do formulário */
+  }
+
+.icone_pesquisa{
+    background-color: white;
+}
+
+.button_pesquisa{
+    background-color: white;
+    cursor: pointer;
+}
+
+.categorias_topo{
+    text-align: center;
+}
+
+.button_categoria{
+    background-color: #1C4C96;
+    border-style: none;
+    border-color: white;
+    cursor: pointer;
+}
+
+.button_separacao{
+    background-color: #1C4C96;
+    border-style: none;
+    color: white;
+}
+
+.busca{
+    border: none;
+    border-radius: none;
+    outline:none;
+}
+
+.link_topo{
+    color: white;
+    text-decoration: none;
+}
+
+.link_topo:visited{
+    color: white;
+}
+
+.link_topo:hover{
+    color: #FFD738;
+}
