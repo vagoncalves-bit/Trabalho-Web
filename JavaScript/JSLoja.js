@@ -1,4 +1,6 @@
 
+newItem = {};
+ItensInCart = [];
 updatePrice();
 
 const removeButtons = document.getElementsByClassName("remover");
@@ -9,9 +11,6 @@ const qtdButtons = document.getElementsByClassName("qtdInput");
 for(var i = 0; i < qtdButtons.length; i++){
     qtdButtons[i].addEventListener("change", updatePrice);
 }
-const addButtons = document.getElementsByClassName("carrinho")
-console.log(addButtons)
-
 
 
 function removeItem(event){
@@ -32,3 +31,8 @@ function updatePrice(){
     totalPrice = totalPrice.replace(".", ",");
     document.getElementsByClassName("ValorFooter")[0].innerText = "R$" + totalPrice;
 }
+for(var i = 0; i < localStorage.length; i++){
+    newItem = JSON.parse(localStorage.getItem("Cart"+i));
+    ItensInCart.push(newItem)
+}
+console.log(ItensInCart)
