@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/Finalização-Compra.css">
+    <link rel="stylesheet" href="../CSS/Genshin Impact DRIP FONT.ttf">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJpIe26VpQ1K/tG5cWkI21/04V81T9D1tLzXJ6w=" crossorigin=""/>
+</head>
+<body style= "font-family: Genshin; color: black;" class="fundo">
+    <div class="compras">
+        <div class="div_topo container-flex">
+            <form action="#" method="post" class="form">
+                <input type="text" placeholder="Buscar produto" size="80" style="height: 40px;" padding="30px" class="busca">
+                <button class="button_pesquisa" style="border: 3px solid white; border-radius: 8px;"><i class="material-icons icone_pesquisa" style="font-size: 40px; background-color: white;">search</i></button> 
+            </form>
+        </div>
+        <div class="div_adicional categorias_topo">
+            <button class="button_categoria" style="font-family: Genshin; font-size:20px; color:white;"><a href="" target="_self" class="link_topo">Voltar para o item</a></button>
+            <button class="button_separacao" style="font-size: 20px;">|</button>
+            <button class="button_categoria" style="font-family: Genshin; font-size:20px; color:white;"><a href="" target="_self" class="link_topo">Catálogo</a></button>
+            <button class="button_separacao" style="font-size: 20px;">|</button> 
+            <button class="button_categoria" style="font-family: Genshin; font-size:20px; color:white;"><a href="" target="_self" class="link_topo">Contatos</a></button> 
+            <button class="button_separacao" style="font-size: 20px;">|</button>
+            <button class="button_categoria" style="font-family: Genshin; font-size:20px; color:white;"><a href="" target="_self" class="link_topo">Entrar</a></button>
+            <button class="button_separacao" style="font-size: 20px;">|</button>
+            <button class="button_categoria" style="font-family: Genshin; font-size:20px; color:white;"><a href="" target="_self" class="link_topo">Criar conta</a></button>
+        </div>
+        <div class="conteudo-principal">
+            <div class="container-info">
+                <div class="area-endereco">
+                    <p class="resumo">Endreço de entrega</p>
+                    <form class="formulario-endereco">
+                        <input type="radio" id="endereco" name="local" value="meu-endereco" class="input-endereco"> 
+				        <label for="endereco"> Entregar no meu endereço </label> 
+                    </form>
+                    <div id="mapa"> </div>
+                    <button class="botao-obter-endereco" onclick="endereco()"> Adicionar meu endereco </button>
+                </div>
+                <div class="area-resumo-compra">
+                    <h1 class="resumo"> Resumo da compra: </h1>
+                    <img src="../Imagens/citlali.png" class="imagem"> </img>
+                    <p class="preco-produto"> Total: R$ 600 </p>
+                    <p class="preco-promocao"> Total: R$ 589 À vista</p>
+                    <button class="botao-comprar" onclick="alert('Obrigado por comprar conosco!')"> Finalizar compra </button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container-flex" style="color: white">
+                ©Todos os direitos reservados - Rua lalalalala, 943, Mondstadt - 99990-001 - Presidente Prudente, SP
+            </div>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-2KTo0W2Q5b3tJmQ7E1y265B17l8pLd6X5QnF5I5uW9w=" crossorigin=""></script>
+    <script src="../JavaScript/Finalização-Compra.js"></script>
+</body>
+</html>
