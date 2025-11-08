@@ -44,4 +44,5 @@ function addToCar(event){
  
         localStorage.setItem(Cart[addToCarCount], JSON.stringify(newItem));
         addToCarCount++;
+        alert("Item adicionado ao Carrinho")
 }

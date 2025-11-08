@@ -81,7 +81,9 @@ button:focus{
     padding-left: 10px;
 }
 .QtdFooter{
-    padding-left: 35px;
+    text-align: center;
+    color: black;
+    padding-right: 120px;
 }
 .buttonFooter{
     padding-left: 395px;

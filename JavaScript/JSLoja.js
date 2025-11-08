@@ -3,17 +3,35 @@ newItem = {};
 ItensInCart = [];
 updatePrice();
 
+
+
 const removeButtons = document.getElementsByClassName("remover");
 for(var i = 0; i < removeButtons.length; i++){
     removeButtons[i].addEventListener("click", removeItem);
 }
+
 const qtdButtons = document.getElementsByClassName("qtdInput");
 for(var i = 0; i < qtdButtons.length; i++){
     qtdButtons[i].addEventListener("change", updatePrice);
 }
 
 
+
 function removeItem(event){
+    let removeLocalKey;
+    for(var i = 0; i < document.getElementsByClassName('remover').length; i++)
+    if(document.getElementsByClassName('remover')[i] == event.target){
+        removeLocalKey = i;
+    }
+    if(localStorage.key(localStorage.length-1) != null){
+    for(var i = 0; i < localStorage.key(localStorage.length-1).replace("Cart","")+1; i++){
+        if(JSON.parse(localStorage.getItem("Cart"+i)) != null){
+            if(JSON.parse(localStorage.getItem("Cart"+i)).link == event.target.parentElement.parentElement.querySelector('img').src){
+                localStorage.removeItem("Cart"+i)
+            }
+        }
+    }
+}
     event.target.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
     updatePrice();
 }
@@ -30,13 +48,22 @@ function updatePrice(){
     totalPrice = totalPrice.toFixed(2);
     totalPrice = totalPrice.replace(".", ",");
     document.getElementsByClassName("ValorFooter")[0].innerText = "R$" + totalPrice;
+
+    const qtdTotal = document.getElementsByClassName('qtdInput');
+    let valorTotal = 0;
+    for(var i = 0; i < qtdTotal.length; i++){
+        valorTotal += parseInt(qtdTotal[i].value);
+    }
+    document.getElementsByClassName('QtdFooter')[0].innerHTML = valorTotal;
+
 }
 
-for(var i = 0; i < localStorage.length; i++){
-    newItem = JSON.parse(localStorage.getItem("Cart"+i));
-    ItensInCart.push(newItem)
+for(var i = 0; i < localStorage.key(localStorage.length-1).replace("Cart","")+1; i++){
+    if(JSON.parse(localStorage.getItem("Cart"+i)) != null){
+        newItem = JSON.parse(localStorage.getItem("Cart"+i));
+        ItensInCart.push(newItem)
+    }
 }
-
 
 for(var i = 0; i < ItensInCart.length; i++){
     const linkNewItem = ItensInCart[i].link;
