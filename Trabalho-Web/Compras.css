@@ -1,0 +1,295 @@
+@font-face{
+    font-family: 'Genshin';
+    src:url('Genshin\ Impact\ DRIP\ FONT.ttf') format('truetype');
+}
+
+.div_topo{
+    background-color: #1C4C96;
+    height: 100px;
+}
+
+.div_adicional{
+    background-color: #1C4C96;
+    height: 40px;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #1C4C96;
+  }
+
+form {
+    border: 3px solid white;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Para centralizar o conteúdo interno do formulário */
+}
+
+.icone_pesquisa{
+    background-color: white;
+}
+
+.button_pesquisa{
+    background-color: white;
+    cursor: pointer;
+}
+
+.categorias_topo{
+    padding-left:600px;
+}
+
+.button_categoria{
+    background-color: #1C4C96;
+    border-style: none;
+    border-color: white;
+    cursor: pointer;
+}
+
+.button_separacao{
+    background-color: #1C4C96;
+    border-style: none;
+    color: white;
+}
+
+.distancia_categoria{
+    padding-left: 70px;
+}
+
+.div_destaques{
+    margin-left: 120px;
+    background-color: white;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.busca{
+    border: none;
+    border-radius: none;
+    outline:none;
+}
+
+.button_compra{
+    background-color: #1C4C96;
+    font-size: 36px;
+}
+
+.letra_destaque{
+    font-size: 26px;
+}
+
+.compra_destaques{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.compra_destaques:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.compra_destaques:hover{
+    color: #FFD738;
+    text-decoration: none;
+}
+
+.link_topo{
+    color: white;
+    text-decoration: none;
+}
+
+.link_topo:visited{
+    color: white;
+}
+
+.link_topo:hover{
+    color: #FFD738;
+}
+
+.carrinho{
+    font-size: 23px;
+}
+
+.fundo{
+    background-image: url("./Imagens/genshin.png");
+    background-repeat:round;
+    background-attachment: fixed;
+}
+
+.produto{
+    background-color: #F2F2F2;
+    height: 500px;
+    width: 300px;
+    margin-left: 130px;
+    border: 3px solid #003D66;
+    border-radius: 7px;
+}
+
+.carrinho{
+    padding: 10px;
+    margin-left: 250px;
+}
+
+.distancia_carrinho{
+    margin-left: 385px;
+}
+
+.produto_promocao{
+    background-color: #F2F2F2;
+    height: 550px;
+    width: 300px;
+    margin-left: 130px;
+    border: 3px solid #003D66;
+    border-radius: 7px;
+}
+
+.compras{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.conteudo-principal{
+    width: 100%;
+    height: 600px;
+}
+
+.container-compra{
+    margin: 0 auto;
+    margin-top: 40px;
+    background-color: #F2F2F2;
+    height: 500px;
+    width: 1000px;
+    border: 3px solid #003D66;
+    border-radius: 9px;
+    display: flex; 
+    flex-direction: row;
+}
+
+.imagem-item{
+    width: 350px;
+    height: 500px;
+    align-items: center;
+}
+
+.imagem{
+    margin: 0 auto;
+    transition: 0.5s ease-in-out;
+    width: 350px;
+    height: 500px;
+    border-radius: 9px;
+}
+
+.imagem:hover{
+    transition: 0.5s ease-in-out;
+    scale: 1.1;
+}
+
+.descricao-item{
+    width: 650px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-produto{
+    margin: 0 auto;
+    font-size: 50px;
+    color: #FCEA9D;
+    text-shadow: 0px 0px 5px black;
+    margin-top: 30px;
+}
+
+.descricao-produto{
+    margin-top: 30px;
+    text-align: justify;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.botoes{
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.pague_online{
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    background-color: #1C4C96;
+    color: white;
+    border: none;
+    font-size: 13px;
+    font-family: Genshin;
+    margin: left;
+    margin-left: 20px;
+}
+
+.texto-preco{
+    text-align: justify;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+.preco{
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.preco-produto{
+    text-align: justify;
+    font-size: 25px;
+    padding-left: 20px;
+    text-decoration: line-through;
+    margin-top: 10px;
+}
+
+.preco-promocao{
+    text-align: justify;
+    font-size: 30px;
+    padding-left: 20px;
+    color: red;
+    margin-top: -15px;
+}
+
+.botao-comprar{
+    width: fit-content;
+    height: fit-content;
+    font-family: Genshin;
+    background-color: #1C4C96;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+.botao-carrinho{
+    width: fit-content;
+    height: fit-content;
+    font-family: Genshin;
+    background-color: #1C4C96;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 50px;
+}
