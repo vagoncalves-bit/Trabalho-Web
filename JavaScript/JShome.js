@@ -1,18 +1,26 @@
-
+//localStorage.clear();
 localStorage.setItem("Details", "")
 const addToCarButtons = document.getElementsByClassName("carrinho");
 const Cart = []
-const price = []
-let addToCarCount = parseInt(localStorage.length)-1;
+let addToCarCount = 0;
+{
+if(localStorage.length != 1){
+if(localStorage.key([0]) != 'Details')
+    addToCarCount = localStorage.key([0]).replace('Cart', '')
+else 
+    addToCarCount = localStorage.key([1]).replace('Cart', '')
+}
+
+for(var i = 0; i < localStorage.length; i++){
+    if(localStorage.key([i]) != 'Details'){
+        if(localStorage.key([i]).replace('Cart', '') > addToCarCount){
+            addToCarCount = localStorage.key([i]).replace('Cart', '')
+        }
+    }
+}
+addToCarCount++;
+}
 let newItem = {};
-/*
-for(var i = 0; i < localStorage.length; i++){
-    link.push(localStorage.key(i));
-}
-*/
-for(var i = 0; i < localStorage.length; i++){
-    price.push(localStorage.key(i));
-}
 
 for(var i = 0; i < addToCarButtons.length/2; i++){
     addToCarButtons[i].addEventListener("click", addToCar);
@@ -68,6 +76,17 @@ function infoDetails(event){
             productDetails.name = event.target.parentElement.parentElement.getElementsByTagName('h3')[0].innerText
             productDetails.price = event.target.parentElement.parentElement.getElementsByTagName('h2')[0].innerText
             productDetails.discount = event.target.parentElement.parentElement.getElementsByTagName('h4')[0].innerText
+        }
+    }else {
+        if(event.target.parentElement.parentElement.getElementsByTagName('h3').length != 1){
+            productDetails.img = event.target.parentElement.getElementsByTagName('img')[0].src
+            productDetails.name = event.target.parentElement.getElementsByTagName('h3')[0].innerText
+            productDetails.price = event.target.parentElement.getElementsByTagName('h3')[1].innerText
+        } else{
+            productDetails.img = event.target.parentElement.getElementsByTagName('img')[0].src
+            productDetails.name = event.target.parentElement.getElementsByTagName('h3')[0].innerText
+            productDetails.price = event.target.parentElement.getElementsByTagName('h2')[0].innerText
+            productDetails.discount = event.target.parentElement.getElementsByTagName('h4')[0].innerText
         }
     }
     console.log(productDetails)

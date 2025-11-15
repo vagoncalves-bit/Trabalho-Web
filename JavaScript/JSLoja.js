@@ -32,8 +32,12 @@ function removeItem(event){
         }
     }
 }
+    
     event.target.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
     updatePrice();
+    if(document.getElementsByClassName('remover').length === 0){
+        localStorage.clear();
+    }
 }
 
 function updatePrice(){
