@@ -1,0 +1,236 @@
+@font-face{
+    font-family: 'Genshin';
+    src:url('Genshin\ Impact\ DRIP\ FONT.ttf') format('truetype');
+}
+
+.fundo{
+    background-image: url("../Imagens/genshin.png");
+    background-repeat:round;
+    background-attachment: fixed;
+}
+
+.div_topo{
+    background-color: #1C4C96;
+    height: 100px;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #1C4C96;
+}
+
+form {
+    border: 3px solid white;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Para centralizar o conteúdo interno do formulário */
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.busca{
+    border: none;
+    border-radius: none;
+    outline:none;
+}
+
+.button_pesquisa{
+    background-color: white;
+    cursor: pointer;
+}
+
+.icone_pesquisa{
+    background-color: white;
+}
+
+.div_adicional{
+    background-color: #1C4C96;
+    height: 40px;
+}
+
+.categorias_topo{
+    padding-left:640px;
+}
+
+.button_categoria{
+    background-color: #1C4C96;
+    border-style: none;
+    border-color: white;
+    cursor: pointer;
+}
+
+.button_separacao{
+    background-color: #1C4C96;
+    border-style: none;
+    color: white;
+}
+
+.link_topo{
+    color: white;
+    text-decoration: none;
+}
+
+.link_topo:visited{
+    color: white;
+}
+
+.link_topo:hover{
+    color: #FFD738;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #1C4C96;
+}
+
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: left;
+    width: 20%;
+    height: 770px; /* only for demonstration, should be removed */
+    background: #F7F6E4;
+    padding: 20px;
+    margin: 0px;
+    color: black;
+}
+  
+  /* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.link_inicio{
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #F7F6E4;
+    border: none;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.link_inicio:hover{
+    text-decoration-line: underline;
+}
+
+.link_inicio:visited{
+    text-decoration: none;
+    color:black;
+}
+
+.catalogo{
+    display: flex;
+    padding-left: 370px;
+    padding-top: 0px;
+}
+
+.compra_destaques{
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+    padding-left: 70px;
+    padding-top: 100px;
+}
+
+.compra_destaques:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.compra_destaques:hover{
+    color: #FFD738;
+    text-decoration: none;
+}
+
+.produto_catalogo{
+    background-color: #F0F0F0;
+    margin-left: 500px;
+    border-radius: 30px;
+    height: 350px;
+    width: 1000px;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    color: black;
+}
+
+.imagem{
+    transition: 0.5s ease-in-out;
+}
+
+.imagem:hover{
+    transition: 0.5s ease-in-out;
+    scale: 1.1;
+}
+
+.pague_online{
+    border-radius: 10px;
+    background-color: #1C4C96;
+    color: white;
+    border: none;
+    font-size: 13px;
+    margin-left: 70px;
+    margin-top: 50px;
+    font-family: Genshin;
+    padding: 7px;
+}
+
+.preco{
+    font-family: Genshin;
+    font-size: 40px;
+    color:black;
+    margin-left: 70px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.preco:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.preco:hover{
+    color: #FFD738;
+    text-decoration: none;
+}
+
+.preco_promocao{
+    font-family: Genshin;
+    font-size: 40px;
+    color:red;
+    margin-left: 70px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.preco_promocao:visited{
+    color: red;
+    text-decoration: none;
+}
+
+.preco_promocao:hover{
+    color: #FFD738;
+    text-decoration: none;
+}
+
+.info{
+    color: black;
+    margin-left: 70px;
+    text-decoration: none;
+    cursor: default;
+}
