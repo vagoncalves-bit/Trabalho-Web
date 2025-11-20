@@ -8,6 +8,12 @@
     height: 100px;
 }
 
+.logo{
+    height: 100px;
+    width: 100px;
+    margin-right: 50px;
+}
+
 .div_adicional{
     background-color: #1C4C96;
     height: 40px;
@@ -26,6 +32,7 @@ form {
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center; /* Para centralizar o conteúdo interno do formulário */
+    margin-right: 150px;
 }
 
 .icone_pesquisa{
