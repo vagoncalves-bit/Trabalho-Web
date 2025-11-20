@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carrinho</title>
+
+        <link rel="stylesheet" href="../CSS/Carrinho.css">
+        <link rel="stylesheet" href="../CSS/Genshin Impact DRIP FONT.ttf">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        
+        <script src="../JavaScript/JSLoja.js" defer></script>
+    </head>
+    
+    <body style= "font-family: Genshin; color: black;" class="fundo">
+        
+        <!-- NAVEGAÇÃO PRINCIPAL --> 
+        
+        <div class="div_topo container-flex">
+            <form action="#" method="post" class="form">
+                <input type="text" placeholder="Buscar produto" size="80" style="height: 40px;" padding="30px" class="busca">
+                <button class="button_pesquisa" style="border: 3px solid white; border-radius: 8px;"><i class="material-icons icone_pesquisa" style="font-size: 40px; background-color: white;">search</i></button> 
+            </form>
+        </div>
+        <div class="div_adicional categorias_topo">
+            <button class="button_categoria" style="font-family: Genshin; font-size:20px; color:white;"><a href="" target="_self" class="link_topo">Catálogo</a></button>
+            <button class="button_separacao" style="font-size: 20px;">|</button> 
+            <button class="button_categoria" style="font-family: Genshin; font-size:20px; color:white;"><a href="home.html" target="_self" class="link_topo">Destaques</a></button> 
+            <button class="button_separacao" style="font-size: 20px;">|</button>
+            <button class="button_categoria" style="font-family: Genshin; font-size:20px; color:white;"><a href="" target="_self" class="link_topo">Entrar</a></button>
+            <button class="button_separacao" style="font-size: 20px;">|</button>
+            <button class="button_categoria" style="font-family: Genshin; font-size:20px; color:white;"><a href="Carrinho.html" target="_self" class="link_topo">Carrinho</a></button>
+        </div>
+        
+        <!-- INÍCIO EXCLUSIVO DA PÁGINA -->
+
+        <p style="font-family: Genshin; color: #FCEA9D; font-size:70px; text-shadow: 0px 0px 5px black;" align="center">Carrinho</p>
+    
+        <div class="mainDiv">
+            <table class="top">
+                <th> imagem </th>
+                <th> PreÇo </th>
+                <th> Quantidade</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </table> 
+            <div class="footer"> 
+                <table>
+                    <th> Valor Total: </th>
+                    <th> Quantidade de itens:</th>
+                    <th class="buttonFooter"><button type="button" class="confirmar" style="font-family: Genshin; font-size:12px; color:white;">Finalizar compra</button> </th> <tr>
+                    <td class="ValorFooter"> "SOMA"</td>
+                    <td class="QtdFooter"> "ITENS"</td>
+            </div> 
+            </footer>
+        </div>
+    </body>
+</html>

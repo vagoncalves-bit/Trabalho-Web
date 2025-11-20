@@ -560,6 +560,7 @@ form {
 }
 
 .titulo-produto{
+    padding-left: 20px;
     margin: 0 auto;
     font-size: 50px;
     color: #FCEA9D;
