@@ -1,6 +1,6 @@
 @font-face{
     font-family: 'Genshin';
-    src:url(../Genshin\ Impact\ DRIP\ FONT.ttf) format('truetype');
+    src:url(../CSS/Genshin\ Impact\ DRIP\ FONT.ttf) format('truetype');
 }
 
 .div_topo{
@@ -278,7 +278,6 @@ form {
     text-align: justify;
     font-size: 15px;
     padding-left: 20px;
-    text-decoration: line-through;
     margin-top: 10px;
 }
 
@@ -288,6 +287,7 @@ form {
     padding-left: 20px;
     color: red;
     margin-top: -15px;
+    text-decoration: underline red;
 }
 
 .botao-comprar{

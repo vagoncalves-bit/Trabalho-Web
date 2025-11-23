@@ -7,8 +7,10 @@ const produtoAtual = JSON.parse(localStorage.getItem('produtoSelecionado'));
 document.getElementsByClassName('imagem')[0].src = produtoAtual.linkImagem;
 document.getElementsByClassName('preco-produto')[0].innerText = 'Total: '+produtoAtual.preco;
 if(produtoAtual.precoPromocional != ""){
+    document.getElementsByClassName('preco-produto')[0].style.textDecoration = 'line-through';
     document.getElementsByClassName('preco-promocao')[0].innerText = 'Total: '+produtoAtual.precoPromocional;
 }else{
+    document.getElementsByClassName('preco-produto')[0].style.fontsize = '20px';
     document.getElementsByClassName('preco-promocao')[0].innerText = '';
 }
 
