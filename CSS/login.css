@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Genshin';
+    src: url(Genshin\ Impact\ DRIP\ FONT.ttf) format('truetype');
+}
+
+body {
+    font-family: 'Genshin';
+    background: url(../Imagens/Fundo-Borrado.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    min-height: 100%;
+}
+
+label{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.titulo{
+    text-align: center;
+    font-family: 'Genshin';
+    color: #FCEA9D;
+    font-size: 50px;
+}
+
+.centralizar{
+    align-items: center;
+    align-content: center;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login{
+    font-family: 'Genshin';
+    background: rgba(169, 180, 194, 0.8);
+    border-radius: 10px;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    margin: 0;
+    box-shadow: #E1E2E6 0px 0px 10px;
+    margin-top: -20px;
+    border: solid 2px #E1E2E6;
+}
+
+.campologin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.botao{
+    background-color: #ffffff;
+    color: #1c4c96;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    font-family: 'Genshin';
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}   
+
+.linkcadastro{
+    color: #FCEA9D;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: font-size 0.3s, text-decoration 0.3s;;
+}
+
+.linkcadastro:hover {
+    font-size: 18px;
+    text-decoration: none;
+    border-bottom: 2px dashed #FCEA9D 
+    padding-bottom 2px;
+}
+
+.fraseLink{
+    color: #ffffff;
+    text-align: center
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 80vh; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.imagem{
+    width: 400px; 
+    height: auto; 
+    margin: 0 50px;
+    object-fit: contain;
+    scale: 100%;
+    
+}
