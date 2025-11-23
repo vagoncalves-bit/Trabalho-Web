@@ -1,0 +1,317 @@
+@font-face{
+    font-family: 'Genshin';
+    src:url(../CSS/Genshin\ Impact\ DRIP\ FONT.ttf) format('truetype');
+}
+
+.div_topo{
+    background-color: #1C4C96;
+    height: 100px;
+}
+
+.logo{
+    height: 100px;
+    width: 100px;
+    margin-right: 50px;
+}
+
+.div_adicional{
+    background-color: #1C4C96;
+    height: 40px;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #1C4C96;
+  }
+
+form {
+    border: 3px solid white;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Para centralizar o conteúdo interno do formulário */
+    margin-right: 150px;
+}
+
+.icone_pesquisa{
+    background-color: white;
+}
+
+.categorias_topo{
+    display: flex;
+    justify-content: center;
+    /*padding-left:600px;*/
+}
+
+.button_pesquisa{
+    background-color: white;
+    cursor: pointer;
+}
+
+.button_categoria{
+    background-color: #1C4C96;
+    border-style: none;
+    border-color: white;
+    cursor: pointer;
+}
+
+.button_separacao{
+    background-color: #1C4C96;
+    border-style: none;
+    color: white;
+}
+
+.distancia_categoria{
+    padding-left: 70px;
+}
+
+.div_destaques{
+    margin-left: 120px;
+    background-color: white;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.busca{
+    border: none;
+    border-radius: none;
+    outline:none;
+}
+
+.button_compra{
+    background-color: #1C4C96;
+    font-size: 36px;
+}
+
+.letra_destaque{
+    font-size: 26px;
+}
+
+.compra_destaques{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.compra_destaques:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.compra_destaques:hover{
+    color: #FFD738;
+    text-decoration: none;
+}
+
+.link_topo{
+    color: white;
+    text-decoration: none;
+}
+
+.link_topo:visited{
+    color: white;
+}
+
+.link_topo:hover{
+    color: #FFD738;
+}
+
+.carrinho{
+    font-size: 23px;
+}
+
+.fundo{
+    background-image: url("../Imagens/genshin.png");
+    background-repeat:round;
+    background-attachment: fixed;
+}
+
+.produto{
+    background-color: #F2F2F2;
+    height: 500px;
+    width: 300px;
+    margin-left: 130px;
+    border: 3px solid #003D66;
+    border-radius: 7px;
+}
+
+.carrinho{
+    padding: 10px;
+    margin-left: 250px;
+}
+
+.distancia_carrinho{
+    margin-left: 385px;
+}
+
+.produto_promocao{
+    background-color: #F2F2F2;
+    height: 550px;
+    width: 300px;
+    margin-left: 130px;
+    border: 3px solid #003D66;
+    border-radius: 7px;
+}
+
+.compras{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.conteudo-principal{
+    width: 100%;
+    height: fit-content
+}
+
+.container-info{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 500px;
+    width: fit-content;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.area-endereco{
+    background-color: #F2F2F2;
+    height: 500px;
+    width: 700px;
+    border: 3px solid #003D66;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-endereco{
+    background-color: #F2F2F2;
+    padding-left: 20px;
+    border: none;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.input-endereco{
+    background-color: #F2F2F2;
+    box-shadow: none;
+}
+
+.input-endereco:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+#mapa{
+    border: 3px solid #003D66;
+    border-radius: 9px;
+    width: 450px;
+    height: 250px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.botao-obter-endereco{
+    width: fit-content;
+    height: fit-content;
+    font-family: Genshin;
+    background-color: #1C4C96;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.botao-obter-endereco:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.botao-obter-endereco:hover{
+    color: #FFD738;
+    text-decoration: none;
+}
+
+.area-resumo-compra{
+    background-color: #F2F2F2;
+    height: fit-content;
+    width: 300px;
+    height: 500px;
+    border: 3px solid #003D66;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+}
+
+.resumo{
+    margin-top: 30px;
+    padding-left: 20px;
+    font-size: 30px;
+    color: #FCEA9D;
+    text-shadow: 0px 0px 5px black;
+}
+
+.imagem{
+    width: 150px;
+    height: 200px;
+    margin-left: 20px;
+    border: 3px solid #003D66;
+    border-radius: 9px;
+}
+
+.preco-produto{
+    text-align: justify;
+    font-size: 15px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.preco-promocao{
+    text-align: justify;
+    font-size: 20px;
+    padding-left: 20px;
+    color: red;
+    margin-top: -15px;
+    text-decoration: underline red;
+}
+
+.botao-comprar{
+    width: fit-content;
+    height: fit-content;
+    font-family: Genshin;
+    background-color: #1C4C96;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.botao-comprar:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.botao-comprar:hover{
+    color: #FFD738;
+    text-decoration: none;
+}
