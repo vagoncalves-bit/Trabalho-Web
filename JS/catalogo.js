@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Lógica de filtragem para regiões específicas
         productItems.forEach(item => {
-            // Obtém a região do produto (usando 'name' como no seu HTML original)
+            // Obtém a região do produto (usando 'name' )
             const itemRegion = item.getAttribute('name'); 
             
             // Verifica se a região do item corresponde à região selecionada
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 item.classList.remove('hidden');
             } else {
                 // Se não corresponder, adiciona a classe hidden para OCULTAR
-                item.classList.add('hidden');
+                item.classList.add('hidden'); 
             }
         });
     }

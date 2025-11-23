@@ -92,24 +92,16 @@ form {
     background-color: #1C4C96;
 }
 
-
-section::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 nav {
-    float: left;
     width: 20%;
-    height: 770px; /* only for demonstration, should be removed */
     background: #F7F6E4;
     padding: 20px;
     margin: 0px;
     color: black;
+    /* Adicione isto para que o nav preencha a altura da section */
+    flex-shrink: 0; /* Previne que o nav encolha */
 }
   
-  /* Style the list inside the menu */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -136,16 +128,19 @@ nav ul {
 
 .catalogo{
     display: flex;
-    padding-left: 370px;
-    padding-top: 0px;
+   justify-content: center;
+   width: 100%;
+   margin-bottom: 30px;
 }
 
 .compra_destaques{
     color: black;
     text-decoration: none;
     font-size: 30px;
-    padding-left: 70px;
-    padding-top: 100px;
+    margin-left: 0; 
+    padding-left: 0;
+    text-align: left; /* Alinha o texto à esquerda na célula do grid */
+    display: block;
 }
 
 .compra_destaques:visited{
@@ -160,18 +155,16 @@ nav ul {
 
 .produto_catalogo{
     background-color: #F0F0F0;
-<<<<<<< Updated upstream
-    margin-left: 500px;
     border-radius: 30px;
-=======
- /*   margin-left: 500px;
-    border-radius: 30px;*/
->>>>>>> Stashed changes
     height: 350px;
-    width: 1000px;
+   width: 100%;
+   max-width: 1000px;
     display:grid;
-    grid-template-columns: 1fr 3fr;
+   grid-template-columns: 300px 1fr;
+   gap: 20px;
+   align-items: center;
     color: black;
+    margin: 0 auto;
 }
 
 .imagem{
@@ -183,25 +176,16 @@ nav ul {
     scale: 1.1;
 }
 
-.pague_online{
-    border-radius: 10px;
-    background-color: #1C4C96;
-    color: white;
-    border: none;
-    font-size: 13px;
-    margin-left: 70px;
-    margin-top: 50px;
-    font-family: Genshin;
-    padding: 7px;
-}
-
 .preco{
     font-family: Genshin;
     font-size: 40px;
     color:black;
-    margin-left: 70px;
-    text-decoration: none;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left; /* Alinha o texto à esquerda na célula do grid */
+    display: block;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .preco:visited{
@@ -218,8 +202,10 @@ nav ul {
     font-family: Genshin;
     font-size: 40px;
     color:red;
-    margin-left: 70px;
-    text-decoration: none;
+    margin-left: 0; 
+    padding-left: 0;
+    text-align: left; /* Alinha o texto à esquerda na célula do grid */
+    display: block;
     cursor: pointer;
 }
 
@@ -235,16 +221,12 @@ nav ul {
 
 .info{
     color: black;
-    margin-left: 70px;
-    text-decoration: none;
+    margin-left: 0;
+    padding-left: 0;
+    text-align: left; /* Alinha o texto à esquerda na célula do grid */
+    display: block;
     cursor: default;
-<<<<<<< Updated upstream
 }
-=======
-}
-
-/* No seu arquivo ../CSS/catalogo.css */
-/* ... (todo o seu código existente) ... */
 
 /* Classe para ocultar produtos não filtrados */
 .produto_catalogo.hidden {
@@ -252,12 +234,45 @@ nav ul {
 }
 
 .products-grid {
-    display: flex; /* Habilita o Flexbox */
-    flex-direction: column; /* Empilha os produtos verticalmente */
-    align-items: center; /* Centraliza os produtos horizontalmente no grid */
-    padding-left: 20%; /* Reserva espaço para a barra lateral (nav: 20%) */
-    padding-right: 20px; /* Um pequeno padding na direita */
-    width: 80%; /* Ocupa o restante do espaço */
-    float: right; /* Flutua para o lado do nav */
+    display: flex; /* Usamos Flexbox para os produtos */
+    flex-direction: column; /* Produtos empilhados verticalmente */
+    gap: 30px; /* Espaçamento entre os produtos (substitui <br><br>) */
+    width: 100%; /* Ocupa a largura total disponível no .main-content */
+    max-width: 1000px; /* Limita a largura máxima dos produtos para não ficarem muito grandes */
 }
->>>>>>> Stashed changes
+
+section {
+    display: flex; /*Habilita o Flexbox para o container principal */
+    width: 100%; /* Ocupa toda a largura disponível */
+    min-height: 800px; /* Ou ajuste conforme sua necessidade */
+}
+
+.main-content {
+    flex-grow: 1; /* Faz com que este container ocupe todo o espaço restante */
+    display: flex; /* Habilita Flexbox para organizar o título e os produtos */
+    flex-direction: column; /* Empilha os itens verticalmente: título, depois os produtos */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Espaçamento geral para o conteúdo principal */
+}
+
+.pague_online {
+    border-radius: 10px;
+    background-color: #1C4C96;
+    color: white;
+    border: none;
+    font-size: 13px;
+    font-family: Genshin;
+    padding: 7px;
+    margin-top: 10px; /* Pequeno espaçamento acima dos botões */
+    margin-right: 10px; /* Espaço entre os botões */
+    display: inline-block; /* Para que os botões fiquem lado a lado */
+}
+
+/* Garante que o texto tachado de promoção fique alinhado com o preço promocional */
+del {
+    display: block; /* Garante que o preço antigo ocupe sua própria linha */
+    text-align: left;
+    margin-left: 0; 
+    font-size: 20px; /* Ajuste o tamanho da fonte para a tachada */
+    color: gray;
+}
