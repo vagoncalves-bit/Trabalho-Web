@@ -160,8 +160,13 @@ nav ul {
 
 .produto_catalogo{
     background-color: #F0F0F0;
+<<<<<<< Updated upstream
     margin-left: 500px;
     border-radius: 30px;
+=======
+ /*   margin-left: 500px;
+    border-radius: 30px;*/
+>>>>>>> Stashed changes
     height: 350px;
     width: 1000px;
     display:grid;
@@ -233,4 +238,26 @@ nav ul {
     margin-left: 70px;
     text-decoration: none;
     cursor: default;
+<<<<<<< Updated upstream
 }
+=======
+}
+
+/* No seu arquivo ../CSS/catalogo.css */
+/* ... (todo o seu código existente) ... */
+
+/* Classe para ocultar produtos não filtrados */
+.produto_catalogo.hidden {
+    display: none;
+}
+
+.products-grid {
+    display: flex; /* Habilita o Flexbox */
+    flex-direction: column; /* Empilha os produtos verticalmente */
+    align-items: center; /* Centraliza os produtos horizontalmente no grid */
+    padding-left: 20%; /* Reserva espaço para a barra lateral (nav: 20%) */
+    padding-right: 20px; /* Um pequeno padding na direita */
+    width: 80%; /* Ocupa o restante do espaço */
+    float: right; /* Flutua para o lado do nav */
+}
+>>>>>>> Stashed changes
