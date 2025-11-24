@@ -4,6 +4,16 @@ ItensInCart = [];
 updatePrice();
 
 
+let QtdItensInCart = 0;
+
+for(var i = 0; i < localStorage.length; i++){
+    if(localStorage.key([i]) != 'Details'){
+        if(parseInt(localStorage.key([i]).replace('Cart', '')) > QtdItensInCart){
+            QtdItensInCart = localStorage.key([i]).replace('Cart', '')
+        }
+    }
+}
+QtdItensInCart++;
 
 const removeButtons = document.getElementsByClassName("remover");
 for(var i = 0; i < removeButtons.length; i++){
@@ -15,7 +25,11 @@ for(var i = 0; i < qtdButtons.length; i++){
     qtdButtons[i].addEventListener("change", updatePrice);
 }
 
-
+document.getElementsByClassName('confirmar')[0].addEventListener("click", confirmar);
+function confirmar(){
+    alert("Obrigado por comprar conosco!")
+    window.location.href = "home.html";
+}
 
 function removeItem(event){
     let removeLocalKey;
@@ -23,21 +37,16 @@ function removeItem(event){
     if(document.getElementsByClassName('remover')[i] == event.target){
         removeLocalKey = i;
     }
-    if(localStorage.key(localStorage.length-1) != null){
-    for(var i = 0; i < localStorage.key(localStorage.length-1).replace("Cart","")+1; i++){
+    for(var i = 0; i < QtdItensInCart; i++){
         if(JSON.parse(localStorage.getItem("Cart"+i)) != null){
-            if(JSON.parse(localStorage.getItem("Cart"+i)).link == event.target.parentElement.parentElement.querySelector('img').src){
+            if(JSON.parse(localStorage.getItem("Cart"+i)).link === event.target.parentElement.parentElement.querySelector('img').src){
                 localStorage.removeItem("Cart"+i)
             }
         }
     }
-}
-    
+
     event.target.parentElement.parentElement.parentElement.parentElement.parentElement.remove();
     updatePrice();
-    if(document.getElementsByClassName('remover').length === 0){
-        localStorage.clear();
-    }
 }
 
 function updatePrice(){
@@ -62,7 +71,7 @@ function updatePrice(){
 
 }
 
-for(var i = 0; i < localStorage.key(localStorage.length-1).replace("Cart","")+1; i++){
+for(var i = 0; i < QtdItensInCart; i++){
     if(JSON.parse(localStorage.getItem("Cart"+i)) != null){
         newItem = JSON.parse(localStorage.getItem("Cart"+i));
         ItensInCart.push(newItem)
@@ -127,7 +136,7 @@ for(var i = 0; i < ItensInCart.length; i++){
     }
     updatePrice();
 }
-   
+
 if(localStorage.getItem("nameUser") != ""){
     const buttonsTop = document.getElementsByClassName("button_categoria")
     buttonsTop[2].innerText = localStorage.getItem("nameUser");

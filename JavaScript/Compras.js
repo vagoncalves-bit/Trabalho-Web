@@ -1,3 +1,4 @@
+
 //recuperando os dados do produto selecionado na página de catálogo//
 const produtoAtual = JSON.parse(localStorage.getItem("produtoClicado"));
 
@@ -45,6 +46,43 @@ function obterDadosProduto() {
     console.log("Dados do produto salvos no localStorage.");
 }
 
+const Cart = []
+
+let newItem = {};
+
+let addToCarCount = 0;
+
+for(var i = 0; i < localStorage.length; i++){
+    if(localStorage.key([i]) != 'Details' || localStorage.key([i]) != 'nameUser'){
+        if(parseInt(localStorage.key([i]).replace('Cart', '')) > addToCarCount){
+            addToCarCount = parseInt(localStorage.key([i]).replace('Cart', ''));
+        }
+    }
+}
+addToCarCount++;
+
+const addToCarButton = document.getElementsByClassName('botao-carrinho');
+addToCarButton[0].addEventListener("click", addToCar);
+
+function addToCar(event){
+    if(produtoAtual.precoPromocional != undefined){
+        newItem.link = produtoAtual.imagem;
+        newItem.name = produtoAtual.nome;
+        newItem.price = produtoAtual.precoPromocional;
+    }else{
+        newItem.link = produtoAtual.imagem;
+        newItem.name = produtoAtual.nome;
+        newItem.price = produtoAtual.preco;
+    }
+    localStorage.setItem('Cart' + addToCarCount, JSON.stringify(newItem));
+        addToCarCount++;
+        alert("Item adicionado ao Carrinho")
+}
+if(localStorage.getItem("nameUser") != ""){
+    const buttonsTop = document.getElementsByClassName("button_categoria")
+    buttonsTop[2].innerText = localStorage.getItem("nameUser");
+}
+   
 
 /*
 Versão Jquery

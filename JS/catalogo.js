@@ -116,3 +116,7 @@ for (let i = 0; i < linksProdutos.length; i++) {
         window.location.href = linkPaginaCompra;
     });
 }
+if(localStorage.getItem("nameUser") != ""){
+    const buttonsTop = document.getElementsByClassName("button_categoria")
+    buttonsTop[2].innerText = localStorage.getItem("nameUser");
+}
