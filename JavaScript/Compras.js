@@ -8,7 +8,11 @@ document.getElementsByClassName("titulo-produto")[0].innerText = produtoAtual.no
 document.getElementsByClassName("descricao-produto")[0].innerText = 'Vestuario de '+produtoAtual.nome;
 document.getElementsByClassName("preco-produto")[0].innerText = produtoAtual.preco;
 
-document.getElementsByClassName("pague_online")[0].innerText = produtoAtual.button1;
+if(produtoAtual.button1){
+    document.getElementsByClassName("pague_online")[0].innerText = produtoAtual.button1;
+}else{
+    document.getElementsByClassName("pague_online")[0].style.display = 'none';
+}
 
 if(produtoAtual.button2 != undefined){
     document.getElementsByClassName("pague_online")[1].innerText = produtoAtual.button2;
