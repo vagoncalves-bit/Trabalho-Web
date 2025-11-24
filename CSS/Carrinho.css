@@ -170,3 +170,9 @@ form {
 .link_topo:hover{
     color: #FFD738;
 }
+
+.logo{
+    height: 100px;
+    width: 100px;
+    margin-right: 50px;
+}

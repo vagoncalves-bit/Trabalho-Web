@@ -276,3 +276,9 @@ del {
     font-size: 20px; /* Ajuste o tamanho da fonte para a tachada */
     color: gray;
 }
+
+.logo{
+    height: 100px;
+    width: 100px;
+    margin-right: 50px;
+}
