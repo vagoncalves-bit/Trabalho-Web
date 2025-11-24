@@ -11,6 +11,7 @@ if(produtoAtual.precoPromocional != ""){
     document.getElementsByClassName('preco-promocao')[0].innerText = 'Total: '+produtoAtual.precoPromocional;
 }else{
     document.getElementsByClassName('preco-produto')[0].style.fontsize = '20px';
+    document.getElementsByClassName('preco-produto')[0].style.textDecoration = 'none';
     document.getElementsByClassName('preco-promocao')[0].innerText = '';
 }
 

@@ -21,7 +21,6 @@ if(produtoAtual.precoPromocional != undefined){
     document.getElementsByClassName("preco-produto")[0].style.textDecoration = 'line-through';
     document.getElementsByClassName("preco-promocao")[0].innerText = produtoAtual.precoPromocional;
 }else{
-    
     document.getElementsByClassName("preco-produto")[0].style.textDecoration = 'none';
     document.getElementsByClassName("preco-promocao")[0].innerText = '';
 }
