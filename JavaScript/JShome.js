@@ -1,25 +1,26 @@
-//localStorage.clear();
-localStorage.setItem("Details", "")
-const addToCarButtons = document.getElementsByClassName("carrinho");
-const Cart = []
-let addToCarCount = 0;
-{
-if(localStorage.length != 1){
-if(localStorage.key([0]) != 'Details')
-    addToCarCount = localStorage.key([0]).replace('Cart', '')
-else 
-    addToCarCount = localStorage.key([1]).replace('Cart', '')
+localStorage.removeItem("Details")
+if(localStorage.getItem('produtoClicado') == null){
+    localStorage.setItem('produtoClicado', '');
+}
+if(localStorage.getItem('nameUser') == null){
+    localStorage.setItem('nameUser', '');
 }
 
+const addToCarButtons = document.getElementsByClassName("carrinho");
+const Cart = []
+
+let addToCarCount = 0;
+
 for(var i = 0; i < localStorage.length; i++){
-    if(localStorage.key([i]) != 'Details'){
-        if(localStorage.key([i]).replace('Cart', '') > addToCarCount){
-            addToCarCount = localStorage.key([i]).replace('Cart', '')
+    if(localStorage.key([i]) != 'produtoClicado' || localStorage.key([i]) != 'nameUser'){
+        if(parseInt(localStorage.key([i]).replace('Cart', '')) > addToCarCount){
+            addToCarCount = parseInt(localStorage.key([i]).replace('Cart', ''));
         }
     }
 }
 addToCarCount++;
-}
+
+
 let newItem = {};
 
 for(var i = 0; i < addToCarButtons.length/2; i++){
@@ -68,27 +69,31 @@ function infoDetails(event){
     let productDetails = {};
     if(event.target.classList.length === 0){
         if(event.target.parentElement.parentElement.getElementsByTagName('h3').length != 1){
-            productDetails.img = event.target.parentElement.parentElement.getElementsByTagName('img')[0].src
-            productDetails.name = event.target.parentElement.parentElement.getElementsByTagName('h3')[0].innerText
-            productDetails.price = event.target.parentElement.parentElement.getElementsByTagName('h3')[1].innerText
+            productDetails.imagem = event.target.parentElement.parentElement.getElementsByTagName('img')[0].src
+            productDetails.nome = event.target.parentElement.parentElement.getElementsByTagName('h3')[0].innerText
+            productDetails.preco = event.target.parentElement.parentElement.getElementsByTagName('h3')[1].innerText
         } else{
-            productDetails.img = event.target.parentElement.parentElement.getElementsByTagName('img')[0].src
+            productDetails.imagem = event.target.parentElement.parentElement.getElementsByTagName('img')[0].src
             productDetails.name = event.target.parentElement.parentElement.getElementsByTagName('h3')[0].innerText
-            productDetails.price = event.target.parentElement.parentElement.getElementsByTagName('h2')[0].innerText
-            productDetails.discount = event.target.parentElement.parentElement.getElementsByTagName('h4')[0].innerText
+            productDetails.precoPromocional = event.target.parentElement.parentElement.getElementsByTagName('h2')[0].innerText
+            productDetails.preco = event.target.parentElement.parentElement.getElementsByTagName('h4')[0].innerText
         }
     }else {
         if(event.target.parentElement.parentElement.getElementsByTagName('h3').length != 1){
-            productDetails.img = event.target.parentElement.getElementsByTagName('img')[0].src
-            productDetails.name = event.target.parentElement.getElementsByTagName('h3')[0].innerText
-            productDetails.price = event.target.parentElement.getElementsByTagName('h3')[1].innerText
+            productDetails.imagem = event.target.parentElement.getElementsByTagName('img')[0].src
+            productDetails.nome = event.target.parentElement.getElementsByTagName('h3')[0].innerText
+            productDetails.preco = event.target.parentElement.getElementsByTagName('h3')[1].innerText
         } else{
-            productDetails.img = event.target.parentElement.getElementsByTagName('img')[0].src
-            productDetails.name = event.target.parentElement.getElementsByTagName('h3')[0].innerText
-            productDetails.price = event.target.parentElement.getElementsByTagName('h2')[0].innerText
-            productDetails.discount = event.target.parentElement.getElementsByTagName('h4')[0].innerText
+            productDetails.imagem = event.target.parentElement.getElementsByTagName('img')[0].src
+            productDetails.nome = event.target.parentElement.getElementsByTagName('h3')[0].innerText
+            productDetails.precoPromocional = event.target.parentElement.getElementsByTagName('h2')[0].innerText
+            productDetails.preco = event.target.parentElement.getElementsByTagName('h4')[0].innerText
         }
     }
-    console.log(productDetails)
-    localStorage.setItem("Details", JSON.stringify(productDetails));
+    localStorage.setItem("produtoClicado", JSON.stringify(productDetails));
+}
+
+if(localStorage.getItem("nameUser") != ""){
+    const buttonsTop = document.getElementsByClassName("button_categoria")
+    buttonsTop[2].innerText = localStorage.getItem("nameUser");
 }
